@@ -89,14 +89,15 @@ http://biztory.test/graphql
 
 - body (json format)
 {
-  "query": "mutation DailyTotalSales($startDate: Date!, $endDate: Date!) { DailyTotalSales(start_date: $startDate, end_date: $endDate) { amount, payment_status, payee_id } }",
+  "query": "mutation DailyTotalSales($startDate: Date!, $endDate: Date!, $paymentStatus: Int, $payeeId: ID) { DailyTotalSales(start_date: $startDate, end_date: $endDate, payment_status: $paymentStatus, payee_id: $payeeId) { amount, payment_status, payee_id } }",
   "variables": {
     "startDate": "2023-01-01",
     "endDate": "2023-06-30",
-    "payment_status": 1,
-    "payee_id": 2
+    "paymentStatus": 1,
+    "payeeId": 506
   }
 }
+
 
 
 5) **Additional**
