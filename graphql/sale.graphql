@@ -1,0 +1,14 @@
+type Mutation{
+    DailyTotalSales(
+        start_date: Date!,
+        end_date: Date! @rules(apply:["after_or_equal:start_date"]),
+        payment_status: Int,
+        payee_id: ID @rules(apply:["exists:users,id"]),
+    ): TotalSales
+}
+
+type TotalSales {
+    amount: String!,
+    payment_status: Int,
+    payee_id: ID,
+}
