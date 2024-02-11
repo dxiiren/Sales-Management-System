@@ -18,25 +18,20 @@ Subscribe to the InvoiceCreated event and write a log entry into the invoice.log
 
 Develop a GraphQL endpoint that allows users to query the system for daily total sales within a specified date range. Users can also filter the results based on payment status and payee ID, providing flexibility in data retrieval and analysis.
 
-**Sample Dataset:**
-
-Included in the repository is a sample dataset in SQL format, providing a foundation for testing and experimentation with the system's functionalities.
-
 **How to Use:**
 
 1. Clone or download the repository to your local machine.
 
 2. Set up a local development environment with a compatible web server (e.g., Apache, Nginx) and a database server (e.g., MySQL, PostgreSQL).
 
-3. Import the sample dataset into your database management system to populate the database with initial data.
+3. Import the provided sample dataset(biztory.sql) into your database management system to initialize the database with initial data.
 
-4. Implement the Sale model with the soft delete trait in your database schema.
+4. Execute composer install to install dependencies.
 
-5. Configure event broadcasting and logging mechanisms as described in the project specifications.
+5. Test all functionalities by running the endpoints defined in api.php.
 
-6. Develop and deploy the GraphQL endpoint to enable querying of daily total sales data.
+6. For additional documentation, please refer to the question.md file included in the repository.
 
-7. Test the system's functionalities by querying sales data using the GraphQL endpoint and verifying event logging and broadcasting operations.
 
 **Notes:**
 
