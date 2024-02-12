@@ -37,7 +37,7 @@ final class DailyTotalSales
         return $query;
     }
 
-    private function calculateTotalSales($query): float
+    private function calculateTotalSales(Builder $query): float
     {
         $totalSales = $query->sum('total');
         return is_string($totalSales) ? (float) $totalSales : $totalSales;
